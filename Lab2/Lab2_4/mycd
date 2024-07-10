@@ -1,0 +1,10 @@
+﻿#!/usr/bin/bash
+if [[ $# == 0 ]]; then
+  cd
+elif [[ $# == 1 ]]; then
+  cd "$1"
+else
+  echo "Too many arguments"
+fi
+pwd
+#cd "$@"

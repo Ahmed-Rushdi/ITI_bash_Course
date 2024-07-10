@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+if [[ $# -eq 0 ]]; then
+    ls
+elif [[ $# -eq 1 && -d $1 ]]; then
+    ls $1
+else
+    echo "Error: Invalid arguments"
+fi
+#ls $@
