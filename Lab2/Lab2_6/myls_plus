@@ -4,7 +4,7 @@ if [[ $# -eq 0 ]]; then
 elif [[ $# -eq 1 && -d $1 ]]; then
     ls $1
 elif [[ $# -eq 2 && -d $2 ]]; then
-    if [[ $1 == "-l" || $1 == "-a" || $1 == "-d" || $1 == "-i" || $1 == "-R" ]]; then
+    if [[ $1 =~ -[ladiR] ]]; then
       ls $1 $2
     else
       echo "Error: Invalid option $1"
