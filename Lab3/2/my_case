@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+shopt -s extglob
+
+read -p "Enter your string: " str
+
+case $str in
++([[:lower:]]))
+  echo "The string is lowercase"
+  ;;
++([[:upper:]]))
+  echo "The string is uppercase"
+  ;;
++([[:digit:]]))
+  echo "The string is a number"
+  ;;
+'')
+  echo "The string is empty"
+  ;;
+*)
+  echo "The string is mixed"
+  ;;
+esac

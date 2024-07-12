@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+#7. What is the output of the following script
+typeset -i n1
+typeset -i n2
+n1=1
+n2=1
+while test $n1 -eq $n2; do # this loop ends at iteration 2
+  n2=$n2+1
+  echo $n1 # this does print
+  if [ $n1 -gt $n2 ]; then # this is false in iteration 1
+    break
+  else
+    continue # got to second iteration n1 = 1 n2 = 2
+  fi
+  n1=$n1+1
+  echo $n2 # this doesn't print
+done
+# output is:
+# 1

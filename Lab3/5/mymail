@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+template=./mtemplate
+
+for user in $(cut -d : -f 1 /etc/passwd); do
+  if [[ $(id -u $user) -ge 1000 ]]; then
+    mail -s "Hello from bash" "$user" < "$template"
+    echo "Mail sent to $user"
+  fi
+done

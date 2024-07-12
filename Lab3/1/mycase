@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+read -p "Enter your character " char
+case $char in
+[a-z])
+  echo "The character is a lowercase letter"
+  ;;
+[A-Z])
+  echo "The character is an uppercase letter"
+  ;;
+[0-9])
+  echo "The character is a digit"
+  ;;
+'')
+  echo "The character is empty"
+  ;;
+*)
+  echo "Error: Invalid character"
+  ;;
+esac

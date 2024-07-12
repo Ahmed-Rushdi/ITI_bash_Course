@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+declare -i n
+declare -i sum=0
+declare -a arr
+read -p "How many elements: " n
+for ((i = 0; i < n; i++)); do
+  read -p "Enter element: " arr[$i]
+done
+
+for ((i = 0; i < n; i++)); do
+  sum+=${arr[$i]}
+done
+echo $sum / $n | bc -l

@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+num_lines=$(cat "/var/mail/$USER" | wc -l)
+
+while true; do
+  new_num_lines=$(cat "/var/mail/$USER" | wc -l)
+  if [[ $new_num_lines > $num_lines ]]; then
+    echo "New Mail for $USER"
+  fi
+  sleep 10
+done
