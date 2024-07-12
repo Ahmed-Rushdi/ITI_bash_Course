@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+declare -i n
+declare -a arr
+read -p "How many elements: " n
+for (( i=0; i < n; i++ )); do
+    read -p "Enter element: " arr[$i]
+done
+echo "${arr[@]}"

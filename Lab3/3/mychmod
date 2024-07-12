@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+dir=dummy_home
+
+if [ -d $dir ]; then
+  #  chmod -R a+x $dir
+  for i in $dir/*; do
+    chmod a+x $i
+  done
+else
+  echo "Directory not found"
+fi

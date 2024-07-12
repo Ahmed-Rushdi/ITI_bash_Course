@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+src=$HOME
+dist=./backup
+
+if [[ ! -d $dist ]]; then
+    mkdir $dist
+fi
+for i in $src/*; do
+  echo $i
+  if [[ -f $src/$i ]]; then
+    cat $src/$i > $dist/$i
+  fi
+done

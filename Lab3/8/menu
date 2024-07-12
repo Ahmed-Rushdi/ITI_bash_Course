@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+select option in "ls" "ls -a" "exit"; do
+  if [[ $option  == "exit" ]]; then break; fi
+  $option
+done
